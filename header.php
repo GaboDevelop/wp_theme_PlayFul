@@ -27,7 +27,7 @@
 	<header id="masthead" class="site-header container">
 
 	<div class="row">
-		<div class="site-branding col-md-4">
+		<div class="site-branding col-lg-4 col-md-6 col-sm-12">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -43,10 +43,13 @@
 				?>
 				
 		</div><!-- .site-branding -->
+	
 		
-		
-		<nav id="site-navigation" class="main-navigation col-md-8">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'pf' ); ?></button>
+		<nav id="site-navigation" class="main-navigation col-lg-8 col-md-6 col-sm-12">
+			<button class="navbar-toggler" aria-controls="primary-menu" aria-expanded="false" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+	
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',

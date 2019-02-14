@@ -896,6 +896,7 @@ a:hover, a:active {
 .testimonials h1{
 	font-size: 24px!important;
 	color: #778391;
+	text-align: center!important;
 }
 .testimonialsInfo .row{
 	margin-top: 20px;
@@ -1160,3 +1161,21 @@ object {
 	display: block;
 	padding: 8px;
 }
+
+
+
+/*resposive desing */
+
+@media only screen and (max-width: 768px) {
+	/* For mobile phones: */
+	.site-title{
+		text-align: center;
+	}
+	.jumbotron{
+		align-content: center;
+	}
+	.contentJumbo h1{
+	  text-align: center!important;
+	  padding: 0px!important;
+	}
+  }

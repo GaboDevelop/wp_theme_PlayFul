@@ -17,16 +17,19 @@ get_header();
 		<div class="row primarySection">
 			<div class="jumbotron col-md-12">
 				<div class="row contentJumbo"> 
-					<h1 class="offset-md-4 col-md-4">Some sort of heading goes her</h1>
+					<div class="offset-lg-3 col-lg-6 offset-md-0 col-md-12">
+						<h1 >Some sort of heading goes her</h1>
+					</div>
 					
-					<p class="offset-md-3 col-md-6">What? I have no idea what to add here... just place some text..too lazy to lipsum it.
+					
+					<p class="offset-lg-2 col-lg-8 col-md-12">What? I have no idea what to add here... just place some text..too lazy to lipsum it.
 					Did you know frogs have 2 legs?</p>
 					<hr class="my-4">
 				</div>
 				<div class="row">
-					<p class="lead col-md-6 offset-md-3">
-						<a class="btn btn-lg" href="#" role="button">Click me to find out more</a>
-					</p>
+					
+					<a class="btn btn-lg col-lg-4 offset-lg-4" href="#" role="button">Click me to find out more</a>
+					
 				</div>
 				
 			</div>	
