@@ -407,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5em;	
 }
 
 dfn, cite, em, i {
@@ -893,7 +893,48 @@ a:hover, a:active {
 .contentJumbo{
 	margin-top: 100px;
 }
+.testimonials h1{
+	font-size: 24px!important;
+	color: #778391;
+}
+.testimonialsInfo .row{
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+}
 
+
+.testimonialsInfo p{
+	margin-top: 20px!important;
+	text-align: center!important;
+	color: #909090!important;
+	font-size: 14px!important;
+}
+
+
+.featured{
+	margin-top: 80px;
+	background: #f2fbff;
+}
+.divider{
+	height: 0.14cm;
+}
+
+.divider-purple{
+	background-color: #8781bd;
+}
+.divider-blue{
+	background-color: #8ba4ca;
+}
+.divider-green{
+	background-color: #abca8b;
+}
+.divider-yellow{
+	background-color: #ffeb7c;
+}
+.divider-orange{
+	background-color: #ff6138;
+}
 
 .page-content,
 .entry-content,
@@ -906,6 +947,77 @@ a:hover, a:active {
 	margin: 0 0 1.5em;
 }
 
+/*--------------------------------------------------------------
+# blog
+--------------------------------------------------------------*/
+.tituloBlog{
+	font-size: 14px;
+	color: #778391;
+}
+.tituloEntrada{
+	list-style: none;
+	font-size: 18px;
+	color: #757575;
+}
+.extractoEntrada{
+	color:#9db1ba;
+	font-size:15px;
+}
+
+.avatar{
+	border-radius: 50%;
+}
+
+.nombreAutor{
+	color: #77bcdb;
+	font-size: 15px;
+}
+
+.categoriaBlog .in{
+	color: #6f6f6f;
+	font-size: 12px;
+}
+
+.categoriaBlog a{
+	text-decoration: none;
+	color: #6f6f6f;
+	font-size: 12px;
+}
+
+.redireccionEntrada a{
+	text-decoration: none!important;
+	color: #000000;
+	border-radius: 2px;
+	
+}
+.botonRedireccionarEntrada{
+	
+	background: #ffffff;
+	padding: 25px 60px;
+	-webkit-box-shadow: 1px 1px 10px 1px rgba(17, 17, 17, 0.1);
+	box-shadow: 1px 1px 10px 1px rgba(17, 17, 17, 0.1);
+}
+
+
+.post-categories ul{
+	list-style-type: none;
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 0px;
+	padding-bottom: 30px!important;
+	padding-top: 0px;
+	margin: 0px;
+	margin-bottom: 5px!important;
+}
+.post-categories li{
+	list-style-type: none!important;
+   	display: inline!important;
+   	padding-right: 5px;
+}
+.margenCategoria{
+	padding: 0px!important;
+	margin: 0px!important;
+}
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1026,4 +1138,25 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/* FOOTER  */
+.site-footer{
+	position: relative;
+	height: 300px;
+	padding-top: 140px;
+}
+.footer-menu ul{
+	font-size: 15px!important;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.footer-menu li a{
+	text-decoration: none!important;
+	color: #111111!important;
+	text-decoration: none;
+	float: left;
+	display: block;
+	padding: 8px;
 }

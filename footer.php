@@ -12,22 +12,26 @@
 ?>
 
 	</div><!-- #content .container-->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pf' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'pf' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pf' ), 'pf', '<a href="http://underscores.me/">Gabriel Ortega</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<div class="container">
+		<footer id="colophon" class="site-footer row">
+			<div class="site-info offset-md-1 col-md-3">
+				<h6>2014 Your Company</h6>
+			</div>
+			<div class="offset-md-4 col-md-4">
+				<nav id="site-navigation" class="footer-menu">
+				<button class="menu-toggle" aria-controls="secundary-menu" aria-expanded="false"><?php esc_html_e( 'Secundary Menu', 'menu-footer' ); ?></button>
+					<?php wp_nav_menu(
+						array(
+							'menu_id'=> 'secundary-menu',
+							'theme_location'=>'menu-footer'	
+						));
+					?>
+				</nav>
+				
+			</div>
+		</footer><!-- #colophon -->
+	</div>
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
