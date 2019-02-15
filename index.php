@@ -18,18 +18,18 @@ get_header();
 			<div class="jumbotron col-md-12">
 				<div class="row contentJumbo"> 
 					<div class="offset-lg-3 col-lg-6 offset-md-0 col-md-12">
-						<h1 >Some sort of heading goes her</h1>
+						<h1 >Some sort of heading goes here</h1>
 					</div>
-					
-					
-					<p class="offset-lg-2 col-lg-8 col-md-12">What? I have no idea what to add here... just place some text..too lazy to lipsum it.
+					<p class="offset-lg-3 col-lg-6 col-md-12">What? I have no idea what to add here... just place some text..too lazy to lipsum it.
 					Did you know frogs have 2 legs?</p>
 					<hr class="my-4">
 				</div>
 				<div class="row">
+					<div class="col-lg-12  botonJumbo">
+						<a class="btn btn-lg " href="#" role="button">Click me to find out more</a>
+					</div>
 					
-					<a class="btn btn-lg col-lg-4 offset-lg-4" href="#" role="button">Click me to find out more</a>
-					
+	
 				</div>
 				
 			</div>	
@@ -37,12 +37,17 @@ get_header();
 	
 	<div class="container testimonials">
 		<div class="row">
-			<h1>testimonials</h1>
+			<div class="col-md-12 tituloTestimonials">
+				<h1>testimonials</h1>
+			</div>
+				
 			<div class="container testimonialsInfo">
 				<div class="row">
-					<div class="col-md-4 container-fluid">
+					<div class="col-lg-4 col-sm-12">
 						<div class="row">
-							<img class="offset-md-4" src="wp-content/themes/wp_theme_PlayFul/img1definitiva.png" alt="">
+							<div class="col-md-12">
+								<img src="wp-content/themes/wp_theme_PlayFul/img/img1definitiva.png"alt="">
+							</div>
 						</div>
 						<div class="row">
 							<p>
@@ -52,9 +57,11 @@ get_header();
 							</p>
 						</div>
 					</div>
-					<div class="col-md-4 ">
+					<div class="col-lg-4 col-sm-12">
 						<div class="row">
-							<img class="offset-md-4" src="wp-content/themes/wp_theme_PlayFul/img2.png" alt="">
+							<div class="col-md-12">
+								<img  src="wp-content/themes/wp_theme_PlayFul/img/img2.png" class="img-fluid" alt="">
+							</div>
 						</div>
 						<div class="row">
 							<p>
@@ -64,9 +71,11 @@ get_header();
 							</p>
 						</div>
 					</div>
-					<div class="col-md-4">
+					<div class="col-lg-4 col-sm-12">
 						<div class="row">
-							<img class="offset-md-4" src="wp-content/themes/wp_theme_PlayFul/img1.png" alt="">
+							<div class="col-md-12">
+								<img src="wp-content/themes/wp_theme_PlayFul/img/img1.png" class="img-fluid" alt="">
+							</div>
 						</div>
 						<div class="row">
 							<p>
@@ -89,7 +98,26 @@ get_header();
 			<div class="col-md-2 divider divider-orange"></div>
 		</div>
 		<div class="row featured-blog">
-			<h3></h3>
+			<div class="offset-lg-1 col-lg-8 col-md-12 tituloBlog tituloFeaturedh3">
+				<h3>FEATURED</h3>
+			</div>
+			<!--ASUMI QUE LA ULTIMA ENTRADA SERIA LA FEATURED , YA QUE NO QUISE EMPLEAR UN PLUGIN-->
+				<?php	
+					while ( have_posts() ) :
+					the_post();
+					?>
+						<div class="offset-lg-1 col-lg-10 tituloFeatured">
+							<h1><?php  the_title();?></h1>
+						</div>
+						<div class="offset-lg-1 col-lg-6 col-sm-12">	
+							<div class="extractoEntrada extractoEntradaFeatured"><?php the_excerpt();?></div>
+						</div>
+					<?php
+					break;
+					endwhile;
+				?>
+					
+			
 			<!-- AQUI ES DONDE HAY QUE COLOCAR EL FEATURED POST-->
 		</div>
 		<div class="row blog">
@@ -104,8 +132,8 @@ get_header();
 					<?php
 				endif;
 					?>
-				<div class="offset-md-1 col-md-8 tituloBlog">
-					<h3>Blog</h3>
+				<div class="offset-lg-1 col-lg-8 col-md-12 tituloBlog">
+					<h3>BLOG</h3>
 				</div>
 				
 					<?php
@@ -113,28 +141,28 @@ get_header();
 				while ( have_posts() ) :
 					the_post();
 					?>
-					<div class="col-md-12">
+					<div class="col-lg-12">
 						<!--titulo-->
 						<div class="row">
-							<div class=" offset-md-1 col-md-10 tituloEntrada">
+							<div class=" offset-lg-1 col-lg-10 tituloEntrada">
 								<h1><?php the_title(); ?></h1>
 							</div>
 						</div>
 						<!-- extracto de parrafo-->
 						<div class="row">
-							<div class="offset-md-1 col-md-8">	
+							<div class="offset-lg-1 col-lg-8 col-sm-12">	
 								<div class="extractoEntrada"><?php the_excerpt();?></div>
 							</div>
-							<div class="col-md-3 redireccionEntrada">
+							<div class="col-lg-3 col-sm-12 redireccionEntrada">
 								<a class="botonRedireccionarEntrada" href="<?php the_permalink(); ?>">See more</a>
 							</div>
 						</div>
 						<!--usuario: ¿periodista? ¿escritor? y categoría-->
 						<div class="row">
-							<!-- foto -->
-							<div class="offset-md-1 col-md-1 avatarAutor">
+							<!-- foto avatar-->
+							<div class="offset-lg-1 col-lg-1 col-sm-12 avatarAutor">
 								<div class="row">
-									<div class="offset-md-4">
+									<div class="offset-lg-1 col-sm-12 imgAvatar">
 									<?php echo get_avatar('', 50, '', '', null ) ?>
 									</div>
 								</div>
@@ -142,7 +170,7 @@ get_header();
 								
 							</div>
 							
-							<div class="col-md-8">
+							<div class="col-lg-8 col-sm-12">
 								<!--nombre-->
 								<div class="nombreAutor">
 									<?php the_author();?>
@@ -150,10 +178,10 @@ get_header();
 								<!-- categoria  -->
 								<div class="categoriaBlog">
 									<div class="row">
-										<div class="col-md-1 in">
+										<div class="col-lg-1 col-sm-12 in">
 											in
 										</div>
-										<div class="col-md-10 margenCategoria">
+										<div class="col-lg-10 col-sm-12 margenCategoria">
 											<?php the_category()?>
 										</div>
 										

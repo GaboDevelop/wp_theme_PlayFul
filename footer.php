@@ -14,12 +14,11 @@
 	</div><!-- #content .container-->
 	<div class="container">
 		<footer id="colophon" class="site-footer row">
-			<div class="site-info offset-md-1 col-md-3">
+			<div class="site-info offset-md-1 col-md-3 col-sm-12">
 				<h6>2014 Your Company</h6>
 			</div>
-			<div class="offset-md-4 col-md-4">
+			<div class="offset-md-4 col-md-4 col-sm-12">
 				<nav id="site-navigation" class="footer-menu">
-				<button class="menu-toggle" aria-controls="secundary-menu" aria-expanded="false"><?php esc_html_e( 'Secundary Menu', 'menu-footer' ); ?></button>
 					<?php wp_nav_menu(
 						array(
 							'menu_id'=> 'secundary-menu',

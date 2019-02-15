@@ -27,7 +27,7 @@
 	<header id="masthead" class="site-header container">
 
 	<div class="row">
-		<div class="site-branding col-lg-4 col-md-6 col-sm-12">
+		<div class="site-branding col-lg-4 col-md-6 col-sm-8">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -45,20 +45,34 @@
 		</div><!-- .site-branding -->
 	
 		
-		<nav id="site-navigation" class="main-navigation col-lg-8 col-md-6 col-sm-12">
-			<button class="navbar-toggler" aria-controls="primary-menu" aria-expanded="false" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
 	
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->	
 		
 		
+
+		<nav class="navbar navbar-expand-md navbar-light col-lg-8 col-md-6 col-sm-4 opcionesMenu" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				
+					<?php
+					wp_nav_menu( array(
+						'theme_location'  => 'menu-1',
+						'menu_id'        => 'primary-menu',
+						'depth'	          => 2, // 1 = no dropdowns, 2 = with dropdowns.
+						'container'       => 'div',
+						'container_class' => 'collapse navbar-collapse',
+						'container_id'    => 'bs-example-navbar-collapse-1',
+						'menu_class'      => 'navbar-nav mr-auto',
+						'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+						'walker'          => new WP_Bootstrap_Navwalker(),
+					) );
+					?>
+			</div>
+		</nav>
 	</div><!-- .row -->
 		
 	</header><!-- #masthead -->

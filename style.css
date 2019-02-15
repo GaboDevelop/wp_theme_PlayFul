@@ -68,6 +68,7 @@ html {
 
 body {
 	margin: 0;
+	font-family: 'Raleway', sans-serif;
 }
 
 /**
@@ -636,6 +637,9 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+.site-header{
+	margin-bottom: 20px;
+}
 .main-navigation {
 	clear: both;
 	display: block;
@@ -686,15 +690,15 @@ a:hover, a:active {
 	
 }
 
-.main-navigation a {
+.main-navigation a , .opcionesMenu a{
 	font-size: 15px;
 	display: block;
-	padding:	15px 40px;
+	padding:	15px 40px!important;
 	color: #b4b6b2;
 	text-decoration: none;
 }
-.main-navigation a:hover {
-	color: #fff;
+.main-navigation a:hover , .opcionesMenu a:hover {
+	color: #fff!important;
 	background: #c4daae;
 }
 
@@ -862,7 +866,8 @@ a:hover, a:active {
 }
 
 .jumbotron{
-	background-image: url('clouds.png');
+	background-image: url('img/clouds.png');
+	background-position: center;
 	background-color: #f2f5f5!important;	
 	height: 570px;
 	
@@ -870,9 +875,10 @@ a:hover, a:active {
 
 .jumbotron h1 {
 	font-size: 26px;
-	margin-top: 50px!important;
-	padding-left: 50px!important;
-	margin-bottom: 40px!important;
+	text-align: center;
+	margin-top: 0px!important;
+	padding-right: 10px!important;
+	margin-bottom: 60px!important;
 }
 
 .jumbotron p{
@@ -880,11 +886,14 @@ a:hover, a:active {
 	color: #909090;
 	padding: 0px 70px!important;
 	text-align: center;
-	margin-bottom: 40px!important;
+	margin-bottom: 60px!important;
+}
+.botonJumbo{
+	display: flex;
+  	justify-content: center;
 }
 
 .jumbotron .btn{
-
 	background: #abca8b!important;
 	color: white;
 	padding: 10px 40px!important;
@@ -896,12 +905,12 @@ a:hover, a:active {
 .testimonials h1{
 	font-size: 24px!important;
 	color: #778391;
-	text-align: center!important;
 }
 .testimonialsInfo .row{
 	margin-top: 20px;
 	padding-left: 10px;
 	padding-right: 5px;
+	text-align: center;
 }
 
 
@@ -949,8 +958,21 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# blog
+# blog and featured
 --------------------------------------------------------------*/
+.tituloFeaturedh3{
+	padding-top: 80px;
+}
+.tituloFeatured{
+	
+	font-size: 24px;
+	color: #111111;
+	margin-bottom: 20px!important;
+}
+
+.extractoEntradaFeatured{
+	margin-bottom: 50px!important;
+}
 .tituloBlog{
 	font-size: 14px;
 	color: #778391;
@@ -1000,8 +1022,8 @@ a:hover, a:active {
 }
 
 
-.post-categories ul{
-	list-style-type: none;
+.post-categories {
+	list-style-type: none!important;
 	display: inline-block;
 	padding-right: 10px;
 	padding-left: 0px;
@@ -1009,6 +1031,9 @@ a:hover, a:active {
 	padding-top: 0px;
 	margin: 0px;
 	margin-bottom: 5px!important;
+    margin-left: -35px!important;
+    position: relative!important;
+    bottom: 4px!important;
 }
 .post-categories li{
 	list-style-type: none!important;
@@ -1168,6 +1193,11 @@ object {
 
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
+	
+	.main-navigation{
+		list-style: none!important;
+	}
+
 	.site-title{
 		text-align: center;
 	}
@@ -1178,4 +1208,25 @@ object {
 	  text-align: center!important;
 	  padding: 0px!important;
 	}
+
+	.tituloTestimonials , .tituloBlog, .tituloEntrada , .extractoEntrada, .tituloFeatured,
+		.redireccionEntrada, .avatarAutor , .imgAvatar ,.categoriaBlog , .nombreAutor, .site-info,
+		.opcionesMenu{
+		text-align: center!important;
+	}
+
+	.redireccionEntrada{
+		height: 100px;
+		margin-top: 20px;
+	}
+
+	.categoriaBlog ul{
+		list-style: none;
+		text-align: center;
+		position: relative;
+		right: 40px;
+	}
+	
+	
+		
   }

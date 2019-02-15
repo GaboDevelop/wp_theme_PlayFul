@@ -42,7 +42,17 @@ if ( ! function_exists( 'pf_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
+		// Registro de navegación personalizada Walker 
+		
+
+		if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
+			// file does not exist... return an error.
+			return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
+		} else {
+			// file exists... require it.
+			require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+		}
+
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'pf' ),
 			'menu-footer' => esc_html__( 'Secundary', 'menu-footer' )
@@ -121,6 +131,9 @@ add_action( 'widgets_init', 'pf_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pf_scripts() {
+	wp_enqueue_style( 'raleway_font', 'https://fonts.googleapis.com/css?family=Raleway',array(), 'all' );
+
+
 	wp_enqueue_style( 'bootstrap_4', get_template_directory_uri() . '/css/bootstrap.min.css' );
 	wp_enqueue_style( 'pf-style', get_stylesheet_uri() );
 
