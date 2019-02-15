@@ -99,7 +99,7 @@ get_header();
 		</div>
 		<div class="row featured-blog">
 			<div class="offset-lg-1 col-lg-8 col-md-12 tituloBlog tituloFeaturedh3">
-				<h3>FEATURED</h3>
+				<h3 class="tamañoTitulo">FEATURED</h3>
 			</div>
 			<!--ASUMI QUE LA ULTIMA ENTRADA SERIA LA FEATURED , YA QUE NO QUISE EMPLEAR UN PLUGIN-->
 				<?php	
@@ -107,7 +107,7 @@ get_header();
 					the_post();
 					?>
 						<div class="offset-lg-1 col-lg-10 tituloFeatured">
-							<h1><?php  the_title();?></h1>
+							<h1 class="tamañoTituloFeatured"><?php  the_title();?></h1>
 						</div>
 						<div class="offset-lg-1 col-lg-6 col-sm-12">	
 							<div class="extractoEntrada extractoEntradaFeatured"><?php the_excerpt();?></div>
@@ -133,7 +133,7 @@ get_header();
 				endif;
 					?>
 				<div class="offset-lg-1 col-lg-8 col-md-12 tituloBlog">
-					<h3>BLOG</h3>
+					<h3 class="tamañoTitulo">BLOG</h3>
 				</div>
 				
 					<?php
@@ -145,7 +145,7 @@ get_header();
 						<!--titulo-->
 						<div class="row">
 							<div class=" offset-lg-1 col-lg-10 tituloEntrada">
-								<h1><?php the_title(); ?></h1>
+								<h1 class="tamañoTituloEntrada"><?php the_title(); ?></h1>
 							</div>
 						</div>
 						<!-- extracto de parrafo-->
